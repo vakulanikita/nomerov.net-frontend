@@ -1,8 +1,19 @@
+import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import s from '@/styles/Home.module.scss'
+import clsx from 'clsx'
 
 export default function Home() {
+  const [videoEnded, setVideoEnded] = React.useState(false)
+
+  const videoRef = React.useRef(null)
+
+  const handleVideoLoaderEnded = () => {
+    console.log('video ended');
+    setVideoEnded(true)
+  }
+
   return (
     <>
       <Head>
@@ -12,9 +23,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={s.root}>
-        <video className={s.pageLoader} autoPlay loop muted>
-          <source src={'/videoplayback.mp4'} type='video/mp4' />
-        </video>
+        <video
+          className={clsx(s.pageLoader, videoEnded && s.hide)}
+          autoPlay
+          // loop
+          src={'/videoplayback.mp4'}
+          muted
+          onEnded={() => handleVideoLoaderEnded()}
+          playsInline
+          preload='auto'
+        />
       </div>
     </>
   )
