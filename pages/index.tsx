@@ -70,10 +70,10 @@ export default function Home() {
           className={s.swiper}
         >
           <SwiperSlide className={s.swiperSlide}>
-            <img src="/8.png" />
+            <img src="/8.jpg" />
           </SwiperSlide>
           <SwiperSlide className={s.swiperSlide}>
-            <img src="/9.png" />
+            <img src="/9.jpg" />
           </SwiperSlide>
         </Swiper>
 
@@ -81,6 +81,12 @@ export default function Home() {
           <div className={s.text}>Открыть telegram бота</div>
 
           <a href="https://t.me/nomera977_bot">перейти</a>
+        </div>
+
+
+        <div className={s.links}>
+          <a href="https://github.com/vakulanikita/nomerov.net" target="_blank">https://github.com/vakulanikita/nomerov.net</a>
+          <a href="https://github.com/vakulanikita/nomerov.net-frontend" target="_blank">https://github.com/vakulanikita/nomerov.net-frontend</a>
         </div>
       </div>
     </>
