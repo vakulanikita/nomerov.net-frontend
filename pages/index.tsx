@@ -23,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={s.root}>
-        {/* <video
+        <video
           className={clsx(s.pageLoader, videoEnded && s.hide)}
           autoPlay
           // loop
@@ -32,7 +32,7 @@ export default function Home() {
           onEnded={() => handleVideoLoaderEnded()}
           playsInline
           preload='auto'
-        /> */}
+        />
 
         <header>
           <div className={s.logo}>
