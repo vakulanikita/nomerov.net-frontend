@@ -88,7 +88,10 @@ export default function Home() {
           <a href="https://github.com/vakulanikita/nomerov.net" target="_blank">https://github.com/vakulanikita/nomerov.net</a>
           <a href="https://github.com/vakulanikita/nomerov.net-frontend" target="_blank">https://github.com/vakulanikita/nomerov.net-frontend</a>
           <div className={s.copy}>
-            Nikita & Nikita Co.
+            Nikita & Nikita Co. <br />
+            <span>
+              авиабилеты - авиасейлс
+            </span>
           </div>
         </div>
 
