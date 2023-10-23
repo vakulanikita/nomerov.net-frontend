@@ -87,7 +87,11 @@ export default function Home() {
         <div className={s.links}>
           <a href="https://github.com/vakulanikita/nomerov.net" target="_blank">https://github.com/vakulanikita/nomerov.net</a>
           <a href="https://github.com/vakulanikita/nomerov.net-frontend" target="_blank">https://github.com/vakulanikita/nomerov.net-frontend</a>
+          <div className={s.copy}>
+            Nikita & Nikita Co.
+          </div>
         </div>
+
       </div>
     </>
   )
