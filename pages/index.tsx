@@ -80,7 +80,7 @@ export default function Home() {
         <div className={s.cta}>
           <div className={s.text}>Открыть telegram бота</div>
 
-          <a href="https://t.me/nomera977_bot">перейти</a>
+          <a href="https://t.me/nomera977_bot" target="_blank">перейти</a>
         </div>
 
 
