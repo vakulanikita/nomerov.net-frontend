@@ -23,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={s.root}>
-        <video
+        {/* <video
           className={clsx(s.pageLoader, videoEnded && s.hide)}
           autoPlay
           // loop
@@ -32,7 +32,7 @@ export default function Home() {
           onEnded={() => handleVideoLoaderEnded()}
           playsInline
           preload='auto'
-        />
+        /> */}
 
         <header>
           <div className={s.logo}>
@@ -52,26 +52,36 @@ export default function Home() {
         <div className={s.slide}>
           <img src="/4.png" />
         </div>
+        <div className={s.slide}>
+          <img src="/5.png" />
+        </div>
+        <div className={s.slide}>
+          <img src="/6.png" />
+        </div>
+        <div className={s.slide}>
+          <img src="/7.png" />
+        </div>
 
         <Swiper
           spaceBetween={0}
           slidesPerView={1}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
+          className={s.swiper}
         >
           <SwiperSlide className={s.swiperSlide}>
-            <img src="/1.png" />
+            <img src="/8.png" />
           </SwiperSlide>
           <SwiperSlide className={s.swiperSlide}>
-            <img src="/2.png" />
-          </SwiperSlide>
-          <SwiperSlide className={s.swiperSlide}>
-            <img src="/3.png" />
-          </SwiperSlide>
-          <SwiperSlide className={s.swiperSlide}>
-            <img src="/4.png" />
+            <img src="/9.png" />
           </SwiperSlide>
         </Swiper>
+
+        <div className={s.cta}>
+          <div className={s.text}>Открыть telegram бота</div>
+
+          <a href="https://t.me/nomera977_bot">перейти</a>
+        </div>
       </div>
     </>
   )
