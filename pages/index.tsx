@@ -8,11 +8,24 @@ import 'swiper/css';
 
 export default function Home() {
   const [videoEnded, setVideoEnded] = React.useState(false)
+  const videoRef = React.useRef<HTMLVideoElement>(null)
 
   const handleVideoLoaderEnded = () => {
     console.log('video ended');
     setVideoEnded(true)
   }
+
+  React.useEffect(() => {
+    // @ts-ignore
+    videoRef.current.oncanplay = () => {
+      console.log('oncanplay');
+    }
+  }, [])
+
+  React.useEffect(() => {
+    // @ts-ignore
+    console.log(videoRef.current.readyState);
+  }, [videoRef.current?.readyState])
 
   return (
     <>
@@ -24,14 +37,15 @@ export default function Home() {
       </Head>
       <div className={s.root}>
         <video
+          ref={videoRef}
+          src='/videoplayback.mp4'
           className={clsx(s.pageLoader, videoEnded && s.hide)}
           autoPlay
           // loop
-          src={'/videoplayback.mp4'}
           muted
           onEnded={() => handleVideoLoaderEnded()}
           playsInline
-          preload='none'
+          preload='none' // auto, metadata
         />
 
         <header>
@@ -65,8 +79,6 @@ export default function Home() {
         <Swiper
           spaceBetween={0}
           slidesPerView={1}
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
           className={s.swiper}
         >
           <SwiperSlide className={s.swiperSlide}>
