@@ -31,7 +31,7 @@ export default function Home() {
           muted
           onEnded={() => handleVideoLoaderEnded()}
           playsInline
-          preload='auto'
+          preload='none'
         />
 
         <header>
